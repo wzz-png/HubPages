@@ -64,7 +64,7 @@
     <rect x="0" y="0" width="4" height="${o}" rx="2" fill="${n==="cyan"?"#2fd6d6":"#3aa0ff"}" />
     <text x="${s/2}" y="19" text-anchor="middle" class="wc-title">${r}</text>
     ${l}
-  </g>`}function Il({x:e,y:t,w:s=96,h:r=120,level:i=.62,card:n=""}){const o=s/2,l=14,c=t+r,d=t+r*(1-i),a=`well-${Math.round(e)}-${Math.round(t)}`;return`${n}
+  </g>`}function Il({x:e,y:t,w:s=96,h:r=120,level:i=.62,card:n=""}){const o=s/2,l=17,c=t+r,d=t+r*(1-i),a=`well-${Math.round(e)}-${Math.round(t)}`;return`${n}
   <g filter="url(#wTankGlow)">
     <ellipse cx="${e}" cy="${c}" rx="${o}" ry="${l}" fill="url(#wChrome)" />
     <rect x="${e-o}" y="${c-9}" width="${s}" height="9" fill="url(#wChrome)" />
@@ -85,7 +85,7 @@
     <rect x="${e+o-19}" y="${t+14}" width="3" height="${r-30}" rx="1.5" fill="#dff2ff" opacity="0.4" />
     <rect x="${e-o}" y="${t}" width="${s}" height="${r}" fill="none" stroke="#5aa0e6" stroke-width="1.2" opacity="0.7" />
   </g>
-  <path d="M${e} ${c+l} v18" stroke="#2f9be0" stroke-width="7" class="wpipe" />`}function Kr({x:e,y:t,w:s=200,h:r=150,depth:i=34,level:n=.55,card:o=""}){const l=t+r*(1-n),c=`pool-${Math.round(e)}-${Math.round(t)}`;return`<g filter="url(#wSoft)">
+  <path d="M${e} ${c+l} v18" stroke="#2f9be0" stroke-width="7" class="wpipe" />`}function Kr({x:e,y:t,w:s=200,h:r=150,depth:i=40,level:n=.55,card:o=""}){const l=t+r*(1-n),c=`pool-${Math.round(e)}-${Math.round(t)}`;return`<g filter="url(#wTankGlow)">
     <polygon points="${e},${t} ${e+i},${t-i} ${e+s+i},${t-i} ${e+s},${t}" fill="url(#wPoolTop)" stroke="#cfeaff" stroke-width="1.2" opacity="0.92" />
     <g opacity="0.55" stroke="#eaffff" fill="none">
       <path d="M${e+i*.35} ${t-i*.35} h${s}" stroke-width="1" class="wripple" />
@@ -103,7 +103,7 @@
     </g>
     <line x1="${e}" y1="${t}" x2="${e+s}" y2="${t}" stroke="#eafaff" stroke-width="1.6" opacity="0.8" />
     ${o}
-  </g>`}function Rl({x:e,y:t,r:s=110,h:r=300,level:i=.6,card:n=""}){const o=s*.24,l=t+r,c=`res-${Math.round(e)}-${Math.round(t)}`,d=[.22,.42,.62,.82];let a="";d.forEach(M=>{const I=t+r*M;a+=`<line x1="${e-s}" y1="${I}" x2="${e+s}" y2="${I}" stroke="#cfe4f7" stroke-width="1.4" opacity="0.35" /><line x1="${e-s}" y1="${I+2}" x2="${e+s}" y2="${I+2}" stroke="#04101f" stroke-width="2" opacity="0.4" />`});let h="";for(let M=0;M<9;M++){const I=t+26+M*((r-32)/9);h+=`<line x1="${e-s+4}" y1="${I}" x2="${e-s+18}" y2="${I}" stroke-width="1.2" />`}let $="";return[.15,.4,.65,.9].forEach(M=>{$+=`<path d="M${e-s+2} ${t+r*M} q -9 ${o*.5} 0 ${o}" stroke-width="1.2" opacity="0.6" />`}),`<g filter="url(#wSoft)">
+  </g>`}function Rl({x:e,y:t,r:s=110,h:r=300,level:i=.6,card:n=""}){const o=s*.24,l=t+r,c=`res-${Math.round(e)}-${Math.round(t)}`,d=[.22,.42,.62,.82];let a="";d.forEach(M=>{const I=t+r*M;a+=`<line x1="${e-s}" y1="${I}" x2="${e+s}" y2="${I}" stroke="#cfe4f7" stroke-width="1.4" opacity="0.35" /><line x1="${e-s}" y1="${I+2}" x2="${e+s}" y2="${I+2}" stroke="#04101f" stroke-width="2" opacity="0.4" />`});let h="";for(let M=0;M<9;M++){const I=t+26+M*((r-32)/9);h+=`<line x1="${e-s+4}" y1="${I}" x2="${e-s+18}" y2="${I}" stroke-width="1.2" />`}let $="";return[.15,.4,.65,.9].forEach(M=>{$+=`<path d="M${e-s+2} ${t+r*M} q -9 ${o*.5} 0 ${o}" stroke-width="1.2" opacity="0.6" />`}),`<g filter="url(#wTankGlow)">
     <ellipse cx="${e}" cy="${l}" rx="${s*1.04}" ry="${o}" fill="#081d34" />
     <rect x="${e-s}" y="${l-16}" width="${s*2}" height="16" fill="#123a63" />
     <clipPath id="${c}"><rect x="${e-s}" y="${t}" width="${s*2}" height="${r}" /></clipPath>
@@ -189,13 +189,13 @@
     <path d="${e}" fill="none" stroke="#2f9be0" stroke-width="${t}" stroke-linecap="round" opacity="0.6" filter="url(#wGlow)" />
     <path d="${e}" fill="none" stroke="#dff6ff" stroke-width="${t*.34}" stroke-linecap="round" opacity="0.85" />
     <path d="${e}" fill="none" stroke="#bfeaff" stroke-width="${t*.42}" stroke-linecap="round" class="wflow" ${s?'marker-end="url(#wArrow)"':""} />
-  </g>`}const Fl=[{id:"取水井1",valve:"开",pressure:"0.32",run:"正常"},{id:"取水井2",valve:"开",pressure:"0.32",run:"正常"},{id:"取水井3",valve:"开",pressure:"0.34",run:"正常"},{id:"取水井4",valve:"关",pressure:"0.00",run:"停止"},{id:"取水井5",valve:"开",pressure:"0.33",run:"正常"},{id:"取水井7",valve:"开",pressure:"0.35",run:"正常"},{id:"取水井8",valve:"开",pressure:"0.35",run:"正常"}],Hl=[{id:"中水池",valve:"开",pressure:"0.38",run:"正常"},{id:"中水池",valve:"开",pressure:"0.34",run:"正常",flow:"128.5"},{id:"污水池",valve:"开",pressure:"0.29",run:"正常"}],wt={totalWater:"1,248",waterUnit:"m³/h",totalPressure:"0.34",pUnit:"MPa",status:"正常"},Dl=[{label:"阀门（开/关）",a:12,b:1,icon:"valve"},{label:"水泵（运行/停止）",a:2,b:0,icon:"pump"},{label:"水池（正常/异常）",a:5,b:0,icon:"pool"}],Ll={class:"w-topbar"},jl={class:"w-tools"},Vl={class:"w-clock"},Nl={class:"d"},Wl={class:"t"},Bl=["innerHTML"],Gl={class:"w-panel w-overview"},Ul={class:"w-row"},Kl={class:"val"},ql={class:"w-row"},zl={class:"val"},Jl={class:"w-row"},Yl={class:"val ok"},Ql={class:"w-panel w-stats"},Xl={class:"lab"},Zl=["innerHTML"],ef={class:"val"},tf={__name:"WaterSupply",setup(e){const{date:t,time:s}=El("2026-09-26 星期六"),r=[235,440,645,850,1055,1260,1465],i=d=>d==="开"?"#2ee6a6":"#ff5b6a",n=d=>d==="正常"?"#2ee6a6":"#ff5b6a",o=d=>[{k:"阀门：",v:d.valve,color:i(d.valve)},{k:"压力：",v:`${d.pressure}MPa`},{k:"运行：",v:d.run,color:n(d.run)}];function l(d){return d==="valve"?'<path d="M12 6v12" /><path d="M5 8l7 4 7-4-7-4z" /><path d="M5 16l7 4 7-4" />':d==="pump"?'<rect x="4" y="9" width="10" height="9" rx="1" /><path d="M14 12h5l-2-3M14 15h5" /><circle cx="9" cy="13.5" r="2.4" />':'<path d="M4 8h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" /><path d="M4 8c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 4 0" />'}const c=It(()=>{let d="";Fl.forEach((h,$)=>{d+=Il({x:r[$],y:168,w:96,h:118,level:h.valve==="开"?.62:.12,card:qt({x:r[$]-75,y:92,w:150,title:h.id,lines:o(h)})})});let a="";return Hl.forEach((h,$)=>{const M=1e3+$*290,I=o(h).concat(h.flow?[{k:"当前流量：",v:`${h.flow} m³/h`,color:"#5fd0ff"}]:[]);a+=Kr({x:M,y:600,w:210,h:150,level:.55,card:qt({x:M+22,y:650,w:166,title:h.id,lines:I})})}),`
+  </g>`}const Fl=[{id:"取水井1",valve:"开",pressure:"0.32",run:"正常"},{id:"取水井2",valve:"开",pressure:"0.32",run:"正常"},{id:"取水井3",valve:"开",pressure:"0.34",run:"正常"},{id:"取水井4",valve:"关",pressure:"0.00",run:"停止"},{id:"取水井5",valve:"开",pressure:"0.33",run:"正常"},{id:"取水井7",valve:"开",pressure:"0.35",run:"正常"},{id:"取水井8",valve:"开",pressure:"0.35",run:"正常"}],Hl=[{id:"中水池",valve:"开",pressure:"0.38",run:"正常"},{id:"中水池",valve:"开",pressure:"0.34",run:"正常",flow:"128.5"},{id:"污水池",valve:"开",pressure:"0.29",run:"正常"}],wt={totalWater:"1,248",waterUnit:"m³/h",totalPressure:"0.34",pUnit:"MPa",status:"正常"},Dl=[{label:"阀门（开/关）",a:12,b:1,icon:"valve"},{label:"水泵（运行/停止）",a:2,b:0,icon:"pump"},{label:"水池（正常/异常）",a:5,b:0,icon:"pool"}],Ll={class:"w-topbar"},jl={class:"w-tools"},Vl={class:"w-clock"},Nl={class:"d"},Wl={class:"t"},Bl=["innerHTML"],Gl={class:"w-panel w-overview"},Ul={class:"w-row"},Kl={class:"val"},ql={class:"w-row"},zl={class:"val"},Jl={class:"w-row"},Yl={class:"val ok"},Ql={class:"w-panel w-stats"},Xl={class:"lab"},Zl=["innerHTML"],ef={class:"val"},tf={__name:"WaterSupply",setup(e){const{date:t,time:s}=El("2026-09-26 星期六"),r=[235,440,645,850,1055,1260,1465],i=d=>d==="开"?"#2ee6a6":"#ff5b6a",n=d=>d==="正常"?"#2ee6a6":"#ff5b6a",o=d=>[{k:"阀门：",v:d.valve,color:i(d.valve)},{k:"压力：",v:`${d.pressure}MPa`},{k:"运行：",v:d.run,color:n(d.run)}];function l(d){return d==="valve"?'<path d="M12 6v12" /><path d="M5 8l7 4 7-4-7-4z" /><path d="M5 16l7 4 7-4" />':d==="pump"?'<rect x="4" y="9" width="10" height="9" rx="1" /><path d="M14 12h5l-2-3M14 15h5" /><circle cx="9" cy="13.5" r="2.4" />':'<path d="M4 8h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" /><path d="M4 8c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 4 0" />'}const c=It(()=>{let d="";Fl.forEach((h,$)=>{d+=Il({x:r[$],y:168,w:104,h:112,level:h.valve==="开"?.62:.12,card:qt({x:r[$]-75,y:92,w:150,title:h.id,lines:o(h)})})});let a="";return Hl.forEach((h,$)=>{const M=1e3+$*290,I=o(h).concat(h.flow?[{k:"当前流量：",v:`${h.flow} m³/h`,color:"#5fd0ff"}]:[]);a+=Kr({x:M,y:600,w:210,h:150,level:.55,card:qt({x:M+22,y:650,w:166,title:h.id,lines:I})})}),`
     ${Ol()}
     ${Z({d:"M235 322 H1465"})}
-    ${Z({d:"M505 322 V430",width:7})}
-    ${Z({d:"M645 322 V430",width:7})}
-    ${Z({d:"M730 500 H838",width:7,arrow:!1})}
-    ${Z({d:"M730 600 H838",width:7,arrow:!1})}
+    ${Z({d:"M560 322 V430",width:7})}
+    ${Z({d:"M705 322 V430",width:7})}
+    ${Z({d:"M815 500 H838",width:7,arrow:!1})}
+    ${Z({d:"M815 600 H838",width:7,arrow:!1})}
     ${Z({d:"M934 503 H1180 V470 H1538",width:7})}
     ${Z({d:"M934 618 H1120 V500 H1538",width:7})}
     ${Z({d:"M1650 505 V545 H1105",width:7,arrow:!1})}
@@ -208,9 +208,9 @@
     ${Z({d:"M1685 750 V900",width:6})}
     ${Z({d:"M1000 900 H1780",width:8})}
     ${d}
-    ${Kr({x:430,y:452,w:300,h:176,level:.6,card:qt({x:490,y:500,w:176,title:"收集池",lines:o({valve:"开",pressure:"0.28",run:"正常"})})})}
-    ${zr({x:505,y:398,open:!0})}
-    ${zr({x:645,y:398,open:!0})}
+    ${Kr({x:415,y:452,w:400,h:182,depth:46,level:.6,card:qt({x:520,y:505,w:190,title:"收集池",lines:o({valve:"开",pressure:"0.28",run:"正常"})})})}
+    ${zr({x:560,y:398,open:!0})}
+    ${zr({x:705,y:398,open:!0})}
     ${qr({x:838,y:470,label:"增压泵1",run:!0})}
     ${qr({x:838,y:585,label:"增压泵2",run:!0})}
     ${Rl({x:1650,y:205,r:112,h:300,level:.62,card:qt({x:1560,y:300,w:180,title:"调蓄水池",lines:o({valve:"开",pressure:"0.41",run:"正常"})})})}
